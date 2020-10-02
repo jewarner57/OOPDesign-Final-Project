@@ -8,7 +8,6 @@ class Fauna(Organism, ABC):
         super().__init__(name, size, x=x, y=y)
         self.xSpeed = xSpeed
         self.ySpeed = ySpeed
-        self.bubbles = []
 
     @abstractmethod
     def eat(self):

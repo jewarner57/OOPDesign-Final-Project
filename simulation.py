@@ -33,11 +33,8 @@ class Simulation:
 
             self.__tank.display_tank(self.__screen)
 
-            events = pygame.event.get()
-            for event in events:
-                print(event)
-                if event.type == pygame.MOUSEBUTTONDOWN:
-                    self.__tank.feed_tank()
+            if pygame.mouse.get_pressed()[0]:
+                self.__tank.feed_tank()
 
             pygame.display.flip()
 

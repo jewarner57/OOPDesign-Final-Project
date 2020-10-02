@@ -1,7 +1,7 @@
-from pufferfish import Pufferfish
-from humpbackwhale import Humpbackwhale
+from fish import Fish
+from whale import Whale
 from coral import Coral
-from seaweed import Seaweed
+from algae import Algae
 from random import randint
 
 
@@ -31,10 +31,10 @@ class Tank:
         width, height = screen.get_size()
 
         for _ in range(1, 3):
-            self._fish.append(Pufferfish("Puffer", 20, 5, 2))
+            self._fish.append(Fish("Clownfish", 20, 5, 2))
 
         for _ in range(1, 3):
-            self._fish.append(Humpbackwhale(
+            self._fish.append(Whale(
                 "Humpback", 40, 3, 3, randint(100, width-100), randint(height-300, height-100)))
 
         for _ in range(1, 3):
@@ -43,4 +43,4 @@ class Tank:
 
         for _ in range(1, 3):
             self._plants.append(
-                Seaweed("Seaweed", 20, 5, randint(0, width), height))
+                Algae("Seaweed", 20, 5, randint(0, width), height))

@@ -3,10 +3,11 @@ from breathemixin import BreatheMixin
 import pygame
 
 
-class Humpbackwhale(Fauna, BreatheMixin):
+class Whale(Fauna, BreatheMixin):
     def display(self, screen):
+        """displays the whale using pygame"""
         pygame.draw.circle(screen, (0, 0, 255), [self.x, self.y], self.size)
-        self.breath_air()
+        self.surface()
 
     def eat(self):
         """Eat the food in the tank"""

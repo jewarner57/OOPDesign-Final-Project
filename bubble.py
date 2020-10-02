@@ -12,6 +12,7 @@ class Bubble:
         self.deathSecond = (time.get_ticks()/1000) + self.lifeLength
 
     def display(self, screen):
+        """draws the bubble at it's location"""
         draw.circle(screen, (255, 255, 255), [self.x, self.y], self.size)
 
         if self.speed <= 8:

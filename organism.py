@@ -10,6 +10,7 @@ class Organism(ABC):
         self.y = y
 
     def getAge(self):
+        """returns the age of the organism"""
         return time.get_ticks()/1000
 
     @abstractmethod
