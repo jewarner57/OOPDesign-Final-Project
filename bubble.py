@@ -4,7 +4,7 @@ from random import randint
 
 class Bubble:
     def __init__(self, x, y, size):
-        self.x = x
+        self.x = x + randint(-10, 10)
         self.y = y
         self.size = size
         self.lifeLength = 5
@@ -13,7 +13,8 @@ class Bubble:
 
     def display(self, screen):
         """draws the bubble at it's location"""
-        draw.circle(screen, (255, 255, 255), [self.x, self.y], self.size)
+        draw.circle(screen, (255, 255, 255), [
+                    self.x, self.y], self.size, width=5)
 
         if self.speed <= 8:
             self.speed += randint(0, 2)

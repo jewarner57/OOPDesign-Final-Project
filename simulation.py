@@ -7,7 +7,6 @@ class Simulation:
     def __init__(self):
         self.__tank = None
         self.__screen = None
-        self.__simAge = 0
 
     def create_tank(self):
         """Create A Tank Object and Fill it With Creatures"""

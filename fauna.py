@@ -3,9 +3,8 @@ from organism import Organism
 
 
 class Fauna(Organism, ABC):
-
-    def __init__(self, name, size, xSpeed=5, ySpeed=5, x=100, y=100):
-        super().__init__(name, size, x=x, y=y)
+    def __init__(self, name, size, xSpeed, ySpeed, x, y):
+        super().__init__(name, size, x, y)
         self.xSpeed = xSpeed
         self.ySpeed = ySpeed
 
